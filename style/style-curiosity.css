@@ -1,0 +1,254 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Ring';
+    src: url('../fonts/RINGM___.TTF') format('truetype');
+    font-weight: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --cor0: #FF8C00;
+    --cor1: #DBD3B2;
+    --cor2: #C1C4A9;
+    --cor3: #B4DBB2;
+    --cor4: #293D35;
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque:'Bebas Neue', cursive;
+    --fonte-ring: 'Ring', cursive;
+}
+
+body {
+    background-color: var(--cor2);
+    font-family: var(--fonte-padrao);
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor4);
+    color: var(--cor0);
+    min-height: 139px;
+    max-height: 277;
+    font-weight: bold;
+}
+
+.navbar-links {
+    height: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: var(--cor2);
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.navbar-links li a:hover {
+    color: var(--cor4);
+}
+
+.navbar-links li:hover {
+    background-color: var(--cor2);
+    border-radius: 50px;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 3.7rem;
+    right: 2rem;
+    display: none;
+}
+
+.toggle-button i {
+    color: white;
+}
+
+@media (max-width: 550px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+
+main {
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.400);
+    margin-bottom: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main h1 {
+    color: var(--cor4);
+    font-family: var(--fonte-ring);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+
+main h2 {
+    font-family: var(--fonte-ring);
+    color: var(--cor0);
+    font-size: 1.3em;
+    font-weight: normal;
+    background-image: linear-gradient(to right, var(--cor3), transparent);
+    text-indent: 8px;
+}
+
+main p {
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 2em;
+}
+
+main strong {
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background: var(--cor1);
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+figcaption {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+figcaption.caption a {
+    background-color: white;
+    text-decoration: none;
+    font-weight: normal;   
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor4);
+}
+
+main img {
+    width: 100%;
+}
+
+main img.pequena {
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+div.video {
+    background-color: var(--cor4);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56.7%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.200);
+}
+
+aside h3 {
+    background-color: var(--cor3);
+    color: var(--cor4);
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+aside > ul {
+    list-style-type: '\1F4D6\00A0\00A0'; /*Não compatível com todos os navegadores. Chrome sim. 00A0 - Espaço 1F4D6 - emoji livro*/
+    list-style-position: inside;
+    columns: 1;
+}
+
+aside li {
+    margin: 10px 0px;
+}
+
+.sublist {
+    list-style-type: '\00A0\00A0\00A0\00A0\00A0\00A0\1F4DA';
+    list-style-position: inside;
+}
+
+footer {
+    background-color: var(--cor4);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}
